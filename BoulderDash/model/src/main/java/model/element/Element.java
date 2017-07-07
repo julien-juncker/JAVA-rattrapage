@@ -2,7 +2,6 @@ package model.element;
 
 import java.awt.Image;
 
-
 import model.IElement;
 
 //import fr.exia.showboard.ISquare;
