@@ -19,6 +19,6 @@ public interface IBoulderdashView {
     /**
      * Follow myVehicle.
      */
-    void followMyVehicle();
+    void followMyPlayer();
 
 }

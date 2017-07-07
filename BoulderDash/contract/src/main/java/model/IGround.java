@@ -35,7 +35,7 @@ public interface IGround {
      *            the y
      * @return the on the road XY
      */
-    IElement getOnTheRoadXY(int x, int y);
+    IElement getOnTheGroundXY(int x, int y);
 
     /**
      * Sets the mobile has changed.

@@ -11,17 +11,17 @@ import model.IMobile;
 public interface IBoulderdashModel {
 
     /**
-     * Gets the road.
+     * Gets the Ground.
      *
-     * @return the road
+     * @return the Ground
      */
-    IRoad getRoad();
+    IGround getGround();
 
     /**
      * Gets the my vehicle.
      *
      * @return the myVehicle
      */
-    IMobile getMyVehicle();
+    IMobile getMyPlayer();
 
 }
