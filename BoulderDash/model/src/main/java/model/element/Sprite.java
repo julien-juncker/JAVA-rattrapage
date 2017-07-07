@@ -13,8 +13,8 @@ import javax.imageio.ImageIO;
  * @version 0.1
  */
 public class Sprite {
-
-    /** The image. */
+	
+	 /** The image. */
     private Image   image;
 
     /** The image name. */

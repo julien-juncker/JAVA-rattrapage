@@ -2,6 +2,9 @@ package model;
 
 import java.awt.Image;
 
+import model.element.Permeability;
+import model.element.Sprite;
+
 //import fr.exia.showboard.ISquare;
 
 /**
@@ -15,6 +18,7 @@ public interface IElement extends ISquare {
 
     /**
      * Gets the sprite.
+     * @param <Sprite>
      *
      * @return the sprite
      */
