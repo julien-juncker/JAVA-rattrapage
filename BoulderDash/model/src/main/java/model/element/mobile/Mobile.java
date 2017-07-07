@@ -2,7 +2,9 @@ package model.element.mobile;
 
 import java.awt.Point;
 
+
 import model.IGround;
+import model.IMobile;
 import model.element.Element;
 import model.element.Permeability;
 import model.element.Sprite;
@@ -25,7 +27,7 @@ abstract class Mobile extends Element implements IMobile {
     private Boolean alive = true;
 
     /** The road. */
-    private IRoad   road;
+    private IGround   ground;
 
     /** The board. */
     private IBoard  board;
@@ -40,9 +42,9 @@ abstract class Mobile extends Element implements IMobile {
      * @param permeability
      *            the permeability
      */
-    Mobile(final Sprite sprite, final IRoad road, final Permeability permeability) {
+    Mobile(final Sprite sprite, final IGround ground, final Permeability permeability) {
         super(sprite, permeability);
-        this.setRoad(road);
+        this.setGround(ground);
         this.position = new Point();
     }
 
@@ -60,8 +62,8 @@ abstract class Mobile extends Element implements IMobile {
      * @param permeability
      *            the permeability
      */
-    Mobile(final int x, final int y, final Sprite sprite, final IRoad road, final Permeability permeability) {
-        this(sprite, road, permeability);
+    Mobile(final int x, final int y, final Sprite sprite, final IGround ground, final Permeability permeability) {
+        this(sprite, ground, permeability);
         this.setX(x);
         this.setY(y);
     }
@@ -119,7 +121,7 @@ abstract class Mobile extends Element implements IMobile {
      * Sets the has moved.
      */
     private void setHasMoved() {
-        this.getRoad().setMobileHasChanged();
+        this.getGround().setMobileHasChanged();
     }
 
     /*
@@ -161,7 +163,7 @@ abstract class Mobile extends Element implements IMobile {
      *            based on the road height.
      */
     public final void setY(final int y) {
-        this.getPosition().y = (y + this.getRoad().getHeight()) % this.getRoad().getHeight();
+        this.getPosition().y = (y + this.getGround().getHeight()) % this.getGround().getHeight();
         if (this.isCrashed()) {
             this.die();
         }
@@ -172,8 +174,8 @@ abstract class Mobile extends Element implements IMobile {
      *
      * @return the road
      */
-    public IRoad getRoad() {
-        return this.road;
+    public IGround getGround() {
+        return this.ground;
     }
 
     /**
@@ -182,8 +184,8 @@ abstract class Mobile extends Element implements IMobile {
      * @param road
      *            the new road
      */
-    private void setRoad(final IRoad road) {
-        this.road = road;
+    private void setGround(final IGround ground) {
+        this.ground = ground;
     }
 
     /*
@@ -209,7 +211,7 @@ abstract class Mobile extends Element implements IMobile {
      */
     @Override
     public Boolean isCrashed() {
-        return this.getRoad().getOnTheRoadXY(this.getX(), this.getY()).getPermeability() == Permeability.BLOCKING;
+        return this.getGround().getOnTheGroundXY(this.getX(), this.getY()).getPermeability() == Permeability.BLOCKING;
     }
 
     /*

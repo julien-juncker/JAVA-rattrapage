@@ -30,10 +30,10 @@ public class BoulderdashModel implements IBoulderdashModel {
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
-    public BoulderdashModel(final String fileName, final int myVehicleStartX, final int myVehicleStartY)
+    public BoulderdashModel(final String fileName, final int myPlayerStartX, final int myPlayerStartY)
             throws IOException {
         this.setGround(new Ground(fileName));
-        this.setMyPlayer(new MyPlayer(myVehicleStartX, myVehicleStartY, this.getGround()));
+        this.setMyPlayer(new MyPlayer(myPlayerStartX, myPlayerStartY, this.getGround()));
     }
 
     /* (non-Javadoc)
@@ -58,8 +58,8 @@ public class BoulderdashModel implements IBoulderdashModel {
      * @see fr.exia.insanevehicles.model.IInsaneVehiclesModel#getMyVehicle()
      */
     @Override
-    public final IMobile getMyVehicle() {
-        return this.myVehicle;
+    public final IMobile getMyPlayer() {
+        return this.myPlayer;
     }
 
     /**

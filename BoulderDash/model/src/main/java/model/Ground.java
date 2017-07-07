@@ -7,15 +7,16 @@ import java.io.InputStreamReader;
 import java.util.Observable;
 
 import model.element.IElement;
+import model.element.motionless.MotionLessElementsFactory;
 import model.element.motionless.MotionlessElementsFactory;
 
 /**
- * <h1>The Road Class.</h1>
+ * <h1>The Ground Class.</h1>
  *
  * @author Jade
  * @version 0.3
  */
-class Road extends Observable implements IGround {
+class Ground extends Observable implements IGround {
 
     /** The width. */
     private int          width;
@@ -23,18 +24,18 @@ class Road extends Observable implements IGround {
     /** The height. */
     private int          height;
 
-    /** The on the road. */
-    private IElement[][] onTheRoad;
+    /** The on the Ground. */
+    private IElement[][] onTheGround;
 
     /**
-     * Instantiates a new road with the content of the file fileName.
+     * Instantiates a new Ground with the content of the file fileName.
      *
      * @param fileName
-     *            the file name where the map of the road is
+     *            the file name where the map of the Ground is
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
-    Road(final String fileName) throws IOException {
+    Ground(final String fileName) throws IOException {
         super();
         this.loadFile(fileName);
     }
@@ -55,11 +56,11 @@ class Road extends Observable implements IGround {
         this.setWidth(Integer.parseInt(line));
         line = buffer.readLine();
         this.setHeight(Integer.parseInt(line));
-        this.onTheRoad = new IElement[this.getWidth()][this.getHeight()];
+        this.onTheGround = new IElement[this.getWidth()][this.getHeight()];
         line = buffer.readLine();
         while (line != null) {
             for (int x = 0; x < line.toCharArray().length; x++) {
-                this.setOnTheRoadXY(MotionlessElementsFactory.getFromFileSymbol(line.toCharArray()[x]), x, y);
+                this.setOnTheGroundXY(MotionLessElementsFactory.getFromFileSymbol(line.toCharArray()[x]), x, y);
             }
             line = buffer.readLine();
             y++;
@@ -69,7 +70,7 @@ class Road extends Observable implements IGround {
 
     /*
      * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.IRoad#getWidth()
+     * @see fr.exia.insanevehicles.model.IGround#getWidth()
      */
     @Override
     public final int getWidth() {
@@ -88,7 +89,7 @@ class Road extends Observable implements IGround {
 
     /*
      * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.IRoad#getHeight()
+     * @see fr.exia.insanevehicles.model.IGround#getHeight()
      */
     @Override
     public final int getHeight() {
@@ -107,15 +108,15 @@ class Road extends Observable implements IGround {
 
     /*
      * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.IRoad#getOnTheRoadXY(int, int)
+     * @see fr.exia.insanevehicles.model.IGround#getOnTheGroundXY(int, int)
      */
     @Override
-    public final IElement getOnTheRoadXY(final int x, final int y) {
-        return this.onTheRoad[x][y];
+    public final IElement getOnTheGroundXY(final int x, final int y) {
+        return this.onTheGround[x][y];
     }
 
     /**
-     * Sets the on the road XY.
+     * Sets the on the Ground XY.
      *
      * @param element
      *            the element
@@ -124,13 +125,13 @@ class Road extends Observable implements IGround {
      * @param y
      *            the y
      */
-    private void setOnTheRoadXY(final IElement element, final int x, final int y) {
-        this.onTheRoad[x][y] = element;
+    private void setOnTheGroundXY(final IElement element, final int x, final int y) {
+        this.onTheGround[x][y] = element;
     }
 
     /*
      * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.IRoad#setMobileHasChanged()
+     * @see fr.exia.insanevehicles.model.IGround#setMobileHasChanged()
      */
     @Override
     public final void setMobileHasChanged() {
@@ -140,7 +141,7 @@ class Road extends Observable implements IGround {
 
     /*
      * (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.IRoad#getObservable()
+     * @see fr.exia.insanevehicles.model.IGround#getObservable()
      */
     @Override
     public Observable getObservable() {
