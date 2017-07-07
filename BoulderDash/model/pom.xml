@@ -4,6 +4,7 @@
     <groupId>fr.exia</groupId>
     <artifactId>boulderdash</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <relativePath>..</relativePath>
   </parent>
   <artifactId>model</artifactId>
   <name>boulderdash.model</name>

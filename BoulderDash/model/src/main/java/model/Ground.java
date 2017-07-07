@@ -1,14 +1,14 @@
 package model;
 
 import java.io.BufferedReader;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Observable;
 
-import model.element.IElement;
+import model.IElement;
 import model.element.motionless.MotionLessElementsFactory;
-import model.element.motionless.MotionlessElementsFactory;
 
 /**
  * <h1>The Ground Class.</h1>

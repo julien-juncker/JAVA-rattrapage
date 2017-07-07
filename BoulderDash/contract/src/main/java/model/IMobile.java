@@ -4,6 +4,7 @@ import java.awt.Point;
 
 import model.IElement;
 //import fr.exia.showboard.IPawn;
+import view.IPawn;
 
 /**
  * <h1>The Interface IMobile.</h1>

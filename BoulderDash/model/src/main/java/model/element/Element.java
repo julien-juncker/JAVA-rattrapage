@@ -1,8 +1,10 @@
 package model.element;
 
-import java.awt.Image;
-
 import model.IElement;
+import model.Permeability;
+import model.Sprite;
+
+import java.awt.Image;
 
 //import fr.exia.showboard.ISquare;
 

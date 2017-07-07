@@ -2,9 +2,6 @@ package view;
 
 import java.awt.Point;
 
-import model.IBoard;
-import model.ISquare;
-
 /**
  * <h1>The Interface IPawn.</h1>
  * <p>A class can implement the IPawn interface when it wants to move on a IBoard.</p>

@@ -3,7 +3,8 @@ package model;
 import java.io.IOException;
 
 
-import model.element.mobile.IMobile;
+
+import model.IMobile;
 import model.element.mobile.MyPlayer;
 
 
@@ -16,7 +17,7 @@ public class BoulderdashModel implements IBoulderdashModel {
     private IGround   Ground;
 
     /** The my vehicle. */
-    private IMobile myVehicle;
+    private IMobile myPlayer;
 
     /**
      * Instantiates a new insane vehicles model.

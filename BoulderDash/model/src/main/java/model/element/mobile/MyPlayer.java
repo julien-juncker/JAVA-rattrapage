@@ -3,8 +3,8 @@ package model.element.mobile;
 import java.io.IOException;
 
 import model.IGround;
-import model.element.Permeability;
-import model.element.Sprite;
+import model.Permeability;
+import model.Sprite;
 
 /**
  * <h1>The MyVehicle Class.</h1>
@@ -38,7 +38,7 @@ public class MyPlayer extends Mobile {
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
-    public MyPlayer(final int x, final int y, final Ground ground) throws IOException {
+    public MyPlayer(final int x, final int y, final IGround ground) throws IOException {
         super(x, y, sprite, ground, Permeability.BLOCKING);
         spriteTurnLeft.loadImage();
         spriteTurnRight.loadImage();

@@ -55,11 +55,11 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
      *             Signals that an I/O exception has occurred.
      */
     public BoulderdashView(final IGround ground, final IMobile myPlayer) throws IOException {
-        this.setView(groundView);
+        this.setView(GroundView);
         this.setGround(ground);
         this.setMyPlayer(MyPlayer);
         this.getMyPlayer().getSprite().loadImage();
-        this.setCloseView(new Rectangle(0, this.getMyPlayer().getY(), this.getGround().getWidth(), groundView));
+        this.setCloseView(new Rectangle(0, this.getMyPlayer().getY(), this.getGround().getWidth(), GroundView));
         SwingUtilities.invokeLater(this);
     }
 
@@ -89,7 +89,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 
         for (int x = 0; x < this.getGround().getWidth(); x++) {
             for (int y = 0; y < this.getGround().getHeight(); y++) {
-                boardFrame.addSquare(this.ground.getOnTheGroundXY(x, y), x, y);
+                boardFrame.addSquare(this.Ground.getOnTheGroundXY(x, y), x, y);
             }
         }
         boardFrame.addPawn(this.getMyPlayer());

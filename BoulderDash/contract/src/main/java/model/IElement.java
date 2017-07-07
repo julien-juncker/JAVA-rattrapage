@@ -2,6 +2,9 @@ package model;
 
 import java.awt.Image;
 
+import view.ISquare;
+
+
 //import fr.exia.showboard.ISquare;
 
 /**
@@ -9,17 +12,19 @@ import java.awt.Image;
  *
  * @author Jade
  * @version 0.1
- * @see ISquare
+ * @param <Permeability>
+ * @param <Sprite>
  */
 public interface IElement extends ISquare {
 
     /**
      * Gets the sprite.
      * @param <Sprite>
+     * @param <Sprite>
      *
      * @return the sprite
      */
-    Sprite getSprite();
+     Sprite getSprite();
 
     /**
      * Gets the permeability.
@@ -28,10 +33,6 @@ public interface IElement extends ISquare {
      */
     Permeability getPermeability();
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.showboard.ISquare#getImage()
-     */
     @Override
     Image getImage();
 

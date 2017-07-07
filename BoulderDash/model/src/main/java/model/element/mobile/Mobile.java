@@ -5,10 +5,10 @@ import java.awt.Point;
 
 import model.IGround;
 import model.IMobile;
+import model.Permeability;
+import model.Sprite;
 import model.element.Element;
-import model.element.Permeability;
-import model.element.Sprite;
-//import fr.exia.showboard.IBoard;
+import view.IBoard;
 
 /**
  * <h1>The Mobile Class.</h1>

@@ -20,13 +20,6 @@
       </plugin>
      </plugins>
   </build>
-  <modules>
-    <module>contract</module>
-    <module>controller</module>
-    <module>model</module>
-    <module>view</module>
-    <module>main</module>
-  </modules>
   <reporting>
     <plugins>
       <plugin>
@@ -72,4 +65,11 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <modules>
+  	<module>contract</module>
+  	<module>controller</module>
+  	<module>main</module>
+  	<module>model</module>
+  	<module>view</module>
+  </modules>
 </project>
