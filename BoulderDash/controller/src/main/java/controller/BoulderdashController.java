@@ -68,12 +68,15 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
                     break;
             }
             this.clearStackOrder();
-            if (this.getModel().getMyPlayer().isAlive()) {
-                this.getModel().getMyPlayer().moveDown();
-            }
             this.getView().followMyPlayer();
         }
-        this.getView().displayMessage("CRASH !!!!!!!!!.");
+        if (this.getModel().getMyPlayer().isExit()) {
+        	this.getView().displayMessage("Finis !!!!!!!!!.");
+        }
+        else if (this.getModel().getMyPlayer().isCrashed()) {
+        	this.getView().displayMessage("CRASH !!!!!!!!!.");
+        }
+    
     }
 
     /*

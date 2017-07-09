@@ -70,6 +70,8 @@ public interface IMobile extends IPawn, IElement {
      * @return the boolean
      */
     Boolean isCrashed();
+    
+    Boolean isExit();
 
     /*
      * (non-Javadoc)

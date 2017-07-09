@@ -76,6 +76,11 @@ public class MyPlayer extends Mobile {
         this.setSprite(spriteExplode);
     }
 
+    @Override
+    protected final void exit() {
+        super.exit();
+        this.setSprite(sprite);
+    }
     /*
      * (non-Javadoc)
      * @see fr.exia.insanevehicles.model.element.mobile.Mobile#doNothing()

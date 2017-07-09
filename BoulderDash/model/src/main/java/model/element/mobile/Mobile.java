@@ -167,6 +167,9 @@ abstract class Mobile extends Element implements IMobile {
         if (this.isCrashed()) {
             this.die();
         }
+        else if (this.isExit()) {
+        	this.exit();
+        }
     }
 
     /**
@@ -205,6 +208,13 @@ abstract class Mobile extends Element implements IMobile {
         this.setHasMoved();
     }
 
+    /**
+     * exit.
+     */
+    protected void exit() {
+        this.alive = false;
+        this.setHasMoved();
+    }
     /*
      * (non-Javadoc)
      * @see fr.exia.insanevehicles.model.element.mobile.IMobile#isCrashed()
@@ -212,6 +222,11 @@ abstract class Mobile extends Element implements IMobile {
     @Override
     public Boolean isCrashed() {
         return this.getGround().getOnTheGroundXY(this.getX(), this.getY()).getPermeability() == Permeability.BLOCKING;
+    }
+    
+    @Override
+    public Boolean isExit() {
+        return this.getGround().getOnTheGroundXY(this.getX(), this.getY()).getPermeability() == Permeability.EXIT;
     }
 
     /*
