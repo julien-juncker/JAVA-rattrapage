@@ -2,6 +2,7 @@ package model.element.mobile;
 
 import java.io.IOException;
 
+
 import model.IGround;
 import model.Permeability;
 import model.Sprite;
@@ -15,16 +16,16 @@ import model.Sprite;
 public class MyPlayer extends Mobile {
 
     /** The Constant SPRITE. */
-    private static final Sprite sprite          = new Sprite('H', "MyPlayer.png");
+    private static final Sprite sprite          = new Sprite('H', "Player.png");
 
     /** The Constant spriteTurnLeft. */
-    private static final Sprite spriteTurnLeft  = new Sprite('H', "MyPlayerLeft.png");
+    private static final Sprite spriteTurnLeft  = new Sprite('H', "PlayerLeft.png");
 
     /** The Constant spriteTurnRight. */
-    private static final Sprite spriteTurnRight = new Sprite('H', "MyPlayerRight.png");
+    private static final Sprite spriteTurnRight = new Sprite('H', "PlayerRight.png");
 
     /** The Constant spriteExplode. */
-    private static final Sprite spriteExplode   = new Sprite('H', "MyPlayerExplode.png");
+    private static final Sprite spriteExplode   = new Sprite('H', "PlayerExplode.png");
 
     /**
      * Instantiates a new my vehicle.

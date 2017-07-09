@@ -14,6 +14,10 @@ public enum UserOrder {
 
     /** The left. */
     LEFT,
+    
+    UP,
+    
+    DOWN,
 
     /** The nop. */
     NOP

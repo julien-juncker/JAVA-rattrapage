@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.Dimension;
+
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -13,7 +14,7 @@ import controller.IOrderPerformer;
 import controller.UserOrder;
 import model.IGround;
 import model.IMobile;
-//import fr.exia.showboard.BoardFrame;
+
 
 /**
  * <h1>The InsaneVehiclesView Class.</h1>
@@ -136,6 +137,12 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
                 break;
             case KeyEvent.VK_LEFT:
                 userOrder = UserOrder.LEFT;
+                break;
+            case KeyEvent.VK_UP:
+                userOrder = UserOrder.UP;
+                break;
+            case KeyEvent.VK_DOWN:
+                userOrder = UserOrder.DOWN;
                 break;
             default:
                 userOrder = UserOrder.NOP;

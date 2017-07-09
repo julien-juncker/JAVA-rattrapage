@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 
+
 import model.IBoulderdashModel;
 import view.IBoulderdashView;
 
@@ -54,6 +55,12 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
                     break;
                 case LEFT:
                     this.getModel().getMyPlayer().moveLeft();
+                    break;
+                case DOWN:
+                    this.getModel().getMyPlayer().moveDown();
+                    break;
+                case UP:
+                    this.getModel().getMyPlayer().moveUp();
                     break;
                 case NOP:
                 default:

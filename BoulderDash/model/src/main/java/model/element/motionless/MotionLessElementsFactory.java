@@ -13,12 +13,15 @@ public abstract class MotionLessElementsFactory {
 
     /** The Constant OBSTACLE. */
     private static final Obstacle            OBSTACLE            = new Obstacle();
+    
+    /** The Constant EXIT. */
+    private static final Exit            EXIT            = new Exit();
 
     /**
      * The motionless elements is an array of all possible MotionlessElement.
      */
     private static MotionlessElement[]       motionlessElements  = {
-
+    	EXIT,
         GROUND,
         OBSTACLE,
     	};
@@ -48,6 +51,14 @@ public abstract class MotionLessElementsFactory {
         return OBSTACLE;
     }
 
+    /**
+     * Creates a new exit object.
+     *
+     * @return the motionless element
+     */
+    public static MotionlessElement createExit() {
+        return EXIT;
+    }
 
     /**
      * Gets the good MotionlessElement from file symbol.
