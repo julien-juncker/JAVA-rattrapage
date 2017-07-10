@@ -61,8 +61,7 @@ public abstract class Main {
             controller.play(restart);
             counterDeath++;
             controller.showDeath(counterDeath);
-            
-            
+         
     	}
     }     
 }

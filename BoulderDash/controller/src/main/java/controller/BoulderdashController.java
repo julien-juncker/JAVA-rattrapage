@@ -2,7 +2,7 @@ package controller;
 
 import java.io.IOException;
 
-
+import javax.swing.JFrame;
 
 import model.IBoulderdashModel;
 import view.IBoard;
@@ -78,6 +78,7 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
         if (this.getModel().getMyPlayer().isExit()) {
         	this.getView().displayMessage("Finis !!!!!!!!!.");
         	restart= false ;
+        	
         }
         else if (this.getModel().getMyPlayer().isCrashed()) {
         	this.getView().displayMessage("CRASH !!!!!!!!!.");
@@ -96,6 +97,7 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
     	{
     		
     		this.getView().displayMessage(" You win with : "+this.counterDeath+" try");
+    		System.exit(0);
     	}
         	
     }

@@ -100,6 +100,12 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
 
         boardFrame.setVisible(true);
     }
+    
+    @Override
+    public void close(){
+    	BoardFrame display = new BoardFrame();
+    	display.dispose();
+    }
 
     /**
      * Prints the Ground and the player's vehicle in the console.
