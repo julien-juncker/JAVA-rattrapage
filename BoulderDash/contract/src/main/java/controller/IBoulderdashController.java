@@ -13,11 +13,14 @@ public interface IBoulderdashController {
 
     /**
      * Play.
+     * @param restart 
+     * @param compteurMort 
+     * @return 
      *
      * @throws InterruptedException
      *             the interrupted exception
      */
-    void play() throws InterruptedException;
+    boolean play(boolean restart) throws InterruptedException;
 
     /**
      * Gets the order peformer.

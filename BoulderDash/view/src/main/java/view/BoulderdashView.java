@@ -79,7 +79,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
      */
     @Override
     public final void run() {
-        final BoardFrame boardFrame = new BoardFrame("Close view");
+        final BoardFrame boardFrame = new BoardFrame("BoulderDash");
         boardFrame.setDimension(new Dimension(this.getGround().getWidth(), this.getGround().getHeight()));
         boardFrame.setDisplayFrame(this.closeView);
         boardFrame.setSize(this.closeView.width * squareSize, this.closeView.height * squareSize);

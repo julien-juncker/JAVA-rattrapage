@@ -25,6 +25,10 @@ public abstract class Main {
 
     /** The Constant startY. */
     private static final int startY = 0;
+    
+    public static boolean restart = true;
+    
+    public static int compteurMort = 0;
 
     /**
      * The main method.
@@ -37,13 +41,13 @@ public abstract class Main {
      *             the interrupted exception
      */
     public static void main(final String[] args) throws IOException, InterruptedException {
-    	
+    	while (restart = true);
     		final IBoulderdashModel model = new BoulderdashModel("road.txt", startX, startY);
             final BoulderdashView view = new BoulderdashView(model.getGround(), model.getMyPlayer());
             final IBoulderdashController controller = new BoulderdashController(view, model);
             view.setOrderPerformer(controller.getOrderPeformer());
 
-            controller.play();
+            controller.play(restart,compteurMort);
     	}
   
 }

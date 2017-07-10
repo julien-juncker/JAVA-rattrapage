@@ -4,6 +4,8 @@ import java.io.IOException;
 
 
 import model.IBoulderdashModel;
+import view.BoardFrame;
+import view.IBoard;
 import view.IBoulderdashView;
 
 /**
@@ -26,7 +28,7 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
 
     /** The stack order. */
     private UserOrder            stackOrder;
-
+    
     /**
      * Instantiates a new insane vehicles controller.
      *
@@ -46,7 +48,8 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
      * @see fr.exia.insanevehicles.controller.IIinsaneVehiclesController#play()
      */
     @Override
-    public final void play() throws InterruptedException {
+    public final boolean play(boolean restart) throws InterruptedException {
+    	
         while (this.getModel().getMyPlayer().isAlive()) {
             Thread.sleep(speed);
             switch (this.getStackOrder()) {
@@ -72,11 +75,12 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
         }
         if (this.getModel().getMyPlayer().isExit()) {
         	this.getView().displayMessage("Finis !!!!!!!!!.");
+        	restart= false ;
         }
         else if (this.getModel().getMyPlayer().isCrashed()) {
         	this.getView().displayMessage("CRASH !!!!!!!!!.");
         }
-    
+    return restart;
     }
 
     /*
@@ -166,5 +170,11 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
     public IOrderPerformer getOrderPeformer() {
         return this;
     }
+
+	@Override
+	public void play() throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
