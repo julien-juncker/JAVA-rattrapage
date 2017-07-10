@@ -58,7 +58,7 @@ public class BoulderdashView implements Runnable, KeyListener, IBoulderdashView 
     public BoulderdashView(final IGround ground, final IMobile myPlayer) throws IOException {
         this.setView(GroundView);
         this.setGround(ground);
-        this.setMyPlayer(MyPlayer);
+        this.setMyPlayer(myPlayer);
         this.getMyPlayer().getSprite().loadImage();
         this.setCloseView(new Rectangle(0, this.getMyPlayer().getY(), this.getGround().getWidth(), GroundView));
         SwingUtilities.invokeLater(this);

@@ -26,6 +26,9 @@ public class MyPlayer extends Mobile {
     /** The Constant spriteExplode. */
     private static final Sprite spriteExplode   = new Sprite('H', "PlayerExplode.png");
 
+    private static final Sprite spriteUp   = new Sprite('H', "PlayerUp.png");
+    
+    private static final Sprite spriteDown   = new Sprite('H', "PlayerDown.png");
     /**
      * Instantiates a new my vehicle.
      *
@@ -43,6 +46,8 @@ public class MyPlayer extends Mobile {
         spriteTurnLeft.loadImage();
         spriteTurnRight.loadImage();
         spriteExplode.loadImage();
+        spriteDown.loadImage();
+        spriteUp.loadImage();
     }
 
     /*
@@ -79,6 +84,17 @@ public class MyPlayer extends Mobile {
     protected final void exit() {
         super.exit();
         this.setSprite(sprite);
+    }
+    
+    @Override
+    public final void moveUp() {
+        super.moveUp();
+        this.setSprite(spriteUp);
+    }
+    @Override
+    public final void moveDown() {
+        super.moveDown();
+        this.setSprite(spriteDown);
     }
     /*
      * (non-Javadoc)

@@ -31,9 +31,17 @@ public abstract class Main {
     
     public static boolean restart = true;
     
-    public static int compteurMort = 0;
+    private static int counterDeath = 0;
+    
+    public static int getCounterDeath() {
+		return counterDeath;
+	}
 
-    /**
+	public static void setCounterDeath(int counterDeath) {
+		Main.counterDeath = counterDeath;
+	}
+
+	/**
      * The main method.
      *
      * @param args
@@ -51,6 +59,10 @@ public abstract class Main {
             view.setOrderPerformer(controller.getOrderPeformer());
 
             controller.play(restart);
+            counterDeath++;
+            controller.showDeath(counterDeath);
+            
+            
     	}
     }     
 }

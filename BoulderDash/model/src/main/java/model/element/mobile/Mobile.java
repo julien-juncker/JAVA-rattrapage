@@ -32,6 +32,8 @@ abstract class Mobile extends Element implements IMobile {
     /** The board. */
     private IBoard  board;
 
+	
+
     /**
      * Instantiates a new mobile.
      *
@@ -93,7 +95,7 @@ abstract class Mobile extends Element implements IMobile {
      * @see fr.exia.insanevehicles.model.element.mobile.IMobile#moveDown()
      */
     @Override
-    public void moveDown() {
+	public void moveDown() {
         this.setY(this.getY() + 1);
         this.setHasMoved();
     }

@@ -28,6 +28,8 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
 
     /** The stack order. */
     private UserOrder            stackOrder;
+
+	private int counterDeath;
     
     /**
      * Instantiates a new insane vehicles controller.
@@ -82,7 +84,21 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
         }
     return restart;
     }
-
+    
+    public void showDeath(int counterDeath)
+    {	this.counterDeath=counterDeath;
+    	if (this.getModel().getMyPlayer().isCrashed()) 
+    	{
+    		
+        	this.getView().displayMessage(" number of try : "+this.counterDeath+"");
+    	}
+    	else
+    	{
+    		
+    		this.getView().displayMessage(" You win with : "+this.counterDeath+" try");
+    	}
+        	
+    }
     /*
      * (non-Javadoc)
      * @see fr.exia.insanevehicles.controller.IOrderPerformed#orderPerform(fr.exia.insanevehicles.

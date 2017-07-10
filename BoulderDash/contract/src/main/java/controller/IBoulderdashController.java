@@ -21,6 +21,8 @@ public interface IBoulderdashController {
      *             the interrupted exception
      */
     boolean play(boolean restart) throws InterruptedException;
+    
+    public void showDeath(int counterDeath);
 
     /**
      * Gets the order peformer.
