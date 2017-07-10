@@ -3,8 +3,8 @@ package controller;
 import java.io.IOException;
 
 
+
 import model.IBoulderdashModel;
-import view.BoardFrame;
 import view.IBoard;
 import view.IBoulderdashView;
 
@@ -171,10 +171,5 @@ public class BoulderdashController implements IBoulderdashController, IOrderPerf
         return this;
     }
 
-	@Override
-	public void play() throws InterruptedException {
-		// TODO Auto-generated method stub
-		
-	}
 
 }

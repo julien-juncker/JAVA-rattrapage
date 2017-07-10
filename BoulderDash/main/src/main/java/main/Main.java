@@ -9,6 +9,7 @@ import model.IElement;
 import model.IMobile;
 import model.BoulderdashModel;
 import view.BoulderdashView;
+import view.IBoulderdashView;
 
 /**
  * <h1>The InsaneVehicles Class.</h1>
@@ -19,6 +20,8 @@ import view.BoulderdashView;
 public abstract class Main {
 	
 	private IBoulderdashModel model;
+	
+	private static IBoulderdashController controller;
 
     /** The Constant startX. */
     private static final int startX = 5;
@@ -41,13 +44,13 @@ public abstract class Main {
      *             the interrupted exception
      */
     public static void main(final String[] args) throws IOException, InterruptedException {
-    	while (restart = true);
+    	while (restart = true){
     		final IBoulderdashModel model = new BoulderdashModel("road.txt", startX, startY);
             final BoulderdashView view = new BoulderdashView(model.getGround(), model.getMyPlayer());
             final IBoulderdashController controller = new BoulderdashController(view, model);
             view.setOrderPerformer(controller.getOrderPeformer());
 
-            controller.play(restart,compteurMort);
+            controller.play(restart);
     	}
-  
+    }     
 }

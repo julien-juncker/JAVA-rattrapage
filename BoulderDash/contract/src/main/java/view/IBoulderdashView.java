@@ -14,8 +14,7 @@ public interface IBoulderdashView {
      * @param message
      *            the message
      */
-    void displayMessage(String message);
-
+    void displayMessage(String message) ;
     /**
      * Follow myVehicle.
      */
