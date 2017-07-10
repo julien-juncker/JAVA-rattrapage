@@ -2,7 +2,6 @@ package model.element.mobile;
 
 import java.io.IOException;
 
-
 import model.IGround;
 import model.Permeability;
 import model.Sprite;

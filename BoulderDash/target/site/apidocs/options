@@ -1,0 +1,24 @@
+-classpath
+'C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/contract/target/classes;C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/controller/target/classes;C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/view/target/classes;C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/model/target/classes;C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/main/target/classes;C:/Users/jujuj/.m2/repository/mysql/mysql-connector-java/6.0.6/mysql-connector-java-6.0.6.jar;C:/Users/jujuj/.m2/repository/com/github/jai-imageio/jai-imageio-core/1.3.1/jai-imageio-core-1.3.1.jar'
+-encoding
+'Cp1252'
+-protected
+-sourcepath
+'C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/contract/src/main/java;C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/contract/target/generated-sources/annotations;C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/controller/src/main/java;C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/controller/target/generated-sources/annotations;C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/view/src/main/java;C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/view/target/generated-sources/annotations;C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/model/src/main/java;C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/model/target/generated-sources/annotations;C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/main/src/main/java;C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/main/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2017. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'boulderdash 0.0.1-SNAPSHOT API'
+-linkoffline
+'http://docs.oracle.com/javase/8/docs/api' 'C:/Users/jujuj/git/JAVA-rattrapage/BoulderDash/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'boulderdash 0.0.1-SNAPSHOT API'

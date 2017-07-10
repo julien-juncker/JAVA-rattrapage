@@ -22,6 +22,5 @@ public interface IBoulderdashModel {
      *
      * @return the myVehicle
      */
-    IMobile getMyPlayer();
-
+    IMobile getMyPlayer() ;
 }
